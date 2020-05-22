@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Iniciando con VueJS</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  
+  </head>
+  
+<body>
+  
+ <div id="table">
+    <table class= "table table-striped">
+<thead>
+    <tr> 
+        <th scope = "col">Nombre</th>
+        <th scope = "col">Apellidos</th>
+        <th scope = "col">RUN</th>
+      <th scope = "col">Nacimiento</th>
+        <th scope = "col">Edad</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td> {{user[0].nombre}}</td>
+    <td> {{user[0].apellido}}</td>
+    <td> {{user[0].rut}}</td>
+    <td> {{user[0].bday}}</td>
+    <td> {{user[0].age}}</td>
+    </tr>
+    <tr>
+        <td> {{user[1].nombre}}</td>
+        <td> {{user[1].apellido}}</td>
+        <td> {{user[1].rut}}</td>
+        <td> {{user[1].bday}}</td>
+        <td> {{user[1].age}}</td>
+        </tr>
+        <tr>
+            <td> {{user[2].nombre}}</td>
+            <td> {{user[2].apellido}}</td>
+            <td> {{user[2].rut}}</td>
+            <td> {{user[2].bday}}</td>
+            <td> {{user[2].age}}</td>
+            </tr>
+​
+</tbody>
+</table>
+</div>
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+​---
+    <script>
+    const app = new Vue ({
+        el: '#table',
+      data:{
+    user: [ 
+      {
+        nombre: "Carolina",
+        apellido: 'Herrera',
+        rut: '17.937.565-6',
+        bday: '15-09-1991',
+        age: 28,
+    },
+    {
+        nombre: 'Lucero',
+        apellido: 'Herrera',
+        rut: '14.6378.112-3',
+        bday: '24-09-1991',
+        age: 28,
+    },
+    {
+        nombre: 'Mauro',
+        apellido: 'Herrera',
+        rut: '19.711.636-6',
+        bday: '02-02-1998',
+        age: 22,
+    }
+    ],
+        }
+    })
+  
+  </script>
+
+</body>
+</html>
